@@ -42,9 +42,7 @@ export interface NExpressRouteActionSubOptions {
     params?: NExpressRouteParamDescriptor;
     action: routerFunction;
 }
-export type NExpressRouteActionOptions = {
-    [method in RouterMethods]: NExpressRouteActionSubOptions;
-};
+export type NExpressRouteActionOptions = Record<RouterMethods, NExpressRouteActionSubOptions>;
 export interface NExpressRouteOptions {
     path: string;
     middleware?: middlewareFunction[];

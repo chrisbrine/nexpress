@@ -68,9 +68,7 @@ export interface NExpressRouteActionSubOptions {
   action: routerFunction;
 }
 
-export type NExpressRouteActionOptions = {
-  [method in RouterMethods]: NExpressRouteActionSubOptions;
-};
+export type NExpressRouteActionOptions = Record<RouterMethods, NExpressRouteActionSubOptions>;
 
 export interface NExpressRouteOptions {
   path: string;
