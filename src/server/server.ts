@@ -56,13 +56,23 @@ export class NExpress {
     }
   }
 
+  private getHostString(port: NExpressPort) {
+    const host = port.host ? port.host : "";
+    if (host) {
+      const protocol = port.protocol === NExpressPortTypes.HTTPS ? "https" : "http";
+      return `${protocol}://${host}:${port.port}`;
+    } else {
+      return `port ${port.port}`;
+    }
+  }
+
   private startServer(port: NExpressPort) {
     const useHttps = port.protocol === NExpressPortTypes.HTTPS ? true : false;
     const httpsOptions =
       port.files || ({ key: "", cert: "" } as NExpressHttpsOptions);
     if (useHttps) {
       if (httpsOptions.key === "" || httpsOptions.cert === "") {
-        const errorMsg = `HTTPS key and cert files must be provided for port ${port.port}`;
+        const errorMsg = `HTTPS key and cert files must be provided for ${this.getHostString(port)}`;
         log.error("errorMsg");
         throw new Error(errorMsg);
       } else {
@@ -71,12 +81,12 @@ export class NExpress {
           cert: fs.readFileSync(httpsOptions.cert),
         };
         https.createServer(certFiles, this.app).listen(port.port, () => {
-          log.info(`Server started on port ${port.port}`);
+          log.info(`Server started on ${this.getHostString(port)}`);
         });
       }
     } else {
       this.app.listen(port, () => {
-        log.info(`Server started on port ${port}`);
+        log.info(`Server started on ${this.getHostString(port)}`);
       });
     }
   }
