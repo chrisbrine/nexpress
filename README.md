@@ -122,8 +122,7 @@ There are commands for easily creating the options such as:
 * params is an object list with the key of the parameter name for the method path along with descriptions for each
 ## To do
 
-- Create documentation
-- Fully test
+- Fully test, though it works so far
 
 ## Maybe future?
 
