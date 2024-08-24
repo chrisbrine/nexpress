@@ -1,13 +1,30 @@
 {
-  "name": "nexpress",
+  "name": "@strbjun/nexpress",
   "version": "0.1.0",
-  "description": "",
+  "description": "This module will allow for using a simple object for creating an express based application along with integrating in validators.",
+  "source": "src/index.ts",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "api",
+    "server",
+    "object",
+    "rest",
+    "restful"
+  ],
+  "author": "Chris Brine <chrisbrine.web@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbrine/nexpress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisbrine/nexpress/issues"
+  },
+  "homepage": "https://github.com/chrisbrine/nexpress#readme",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.9.1",

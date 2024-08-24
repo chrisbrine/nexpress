@@ -12,12 +12,6 @@ export enum RouterMethods {
   ALL = "all",
 }
 
-export type routerFunctionWithNext = (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => void;
-export type routerFunctionWithoutNext = (req: Request, res: Response) => void;
 export interface routerFunctionInputs {
   req: Request;
   res: Response;
