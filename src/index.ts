@@ -1,5 +1,7 @@
 export { NExpress } from "./server";
 
+export { NX } from "./helpers";
+
 export {
   NExpressOptions,
   NExpressRouteOptions,

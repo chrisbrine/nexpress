@@ -6,11 +6,11 @@ Likely there are some features missing. If I'm let known about it I will gladly 
 
 ## When installed you only need to use one class:
 
-* **new NExpress(NExpressOptions)**
+- **new NExpress(NExpressOptions)**
 
 For how to enter an NExpressOptions object it is as follows:
 
-````
+```
   ports: {
     {
       port: number,
@@ -59,7 +59,7 @@ For how to enter an NExpressOptions object it is as follows:
     },
     { more routes... },
   }, // optional
-````
+```
 
 ## To do
 

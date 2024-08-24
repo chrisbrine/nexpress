@@ -8,6 +8,7 @@ export enum NExpressPortTypes {
 
 export interface NExpressPort {
   protocol?: NExpressPortTypes;
+  host?: string;
   port: number;
   files?: NExpressHttpsOptions;
 }

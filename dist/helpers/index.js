@@ -30,4 +30,4 @@ var __exportStar =
         __createBinding(exports, m, p);
   };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./server"), exports);
+__exportStar(require("./nx"), exports);

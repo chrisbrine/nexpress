@@ -100,7 +100,11 @@ export class NExpressRouterAction {
         sendJson: (data: unknown, status = 200) => {
           res.json(data).status(status);
         },
-        sendError: (message: string, error?: Error | undefined, status = 400) => {
+        sendError: (
+          message: string,
+          error?: Error | undefined,
+          status = 400,
+        ) => {
           res.json({ message, error }).status(status);
         },
         params: getParams,

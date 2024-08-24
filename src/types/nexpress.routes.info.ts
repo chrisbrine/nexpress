@@ -6,7 +6,7 @@ export interface NExpressRouterInfoResult {
 
 export interface NEexpressRouterActionInfoResult
   extends NExpressRouterInfoMethod {
-  label: string,
+  label: string;
   category: string;
   title: string;
   method: RouterMethods;
