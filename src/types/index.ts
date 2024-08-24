@@ -1,3 +1,3 @@
-export * from "@/types/nexpress";
-export * from "@/types/nexpress.routes";
-export * from "@/types/nexpress.routes.info";
+export * from "./nexpress";
+export * from "./nexpress.routes";
+export * from "./nexpress.routes.info";

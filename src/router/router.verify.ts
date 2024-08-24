@@ -3,7 +3,7 @@ import {
   NExpressVerificationTypes,
   verificationFunction,
   verificationFunctionOptions,
-} from "@/types";
+} from "../types";
 import { stack, StackProcessor } from "@strbjun/nvalidators";
 import { NextFunction, Request, Response, Router } from "express";
 

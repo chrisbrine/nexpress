@@ -1,7 +1,7 @@
 import express from "express";
 import https from "https";
 import fs from "fs";
-import { NExpressRoute } from "@/router";
+import { NExpressRoute } from "../router";
 import {
   NExpressHttpsOptions,
   NExpressOptions,
@@ -9,9 +9,9 @@ import {
   NExpressPortTypes,
   NExpressRouteList,
   NExpressRouteOptionsList,
-} from "@/types";
-import { log } from "@/utils";
-import { NExpressRouterInfo } from "@/types/nexpress.routes.info";
+  NExpressRouterInfo,
+} from "../types";
+import { log } from "../utils";
 
 export class NExpress {
   private app: express.Application;

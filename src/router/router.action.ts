@@ -3,8 +3,8 @@ import {
   NExpressRouteActionSubOptions,
   routerFunction,
   RouterMethods,
-} from "@/types";
-import { NEexpressRouterActionInfoResult } from "@/types/nexpress.routes.info";
+  NEexpressRouterActionInfoResult,
+} from "../types";
 
 export class NExpressRouterAction {
   private label: string;

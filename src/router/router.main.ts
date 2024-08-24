@@ -8,10 +8,10 @@ import {
   NExpressRouteOptionsList,
   NExpressVerificationOptions,
   RouterMethods,
-} from "@/types";
-import { NExpressRouterAction } from "@/router/router.action";
-import { handleVerify } from "@/router/router.verify";
-import { NExpressRouterInfo } from "@/types/nexpress.routes.info";
+  NExpressRouterInfo,
+} from "../types";
+import { NExpressRouterAction } from "./router.action";
+import { handleVerify } from "./router.verify";
 
 export class NExpressRoute {
   private router: Router;
