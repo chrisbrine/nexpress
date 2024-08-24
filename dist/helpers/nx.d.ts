@@ -52,4 +52,5 @@ export declare const NX: {
     category?: string | undefined,
     params?: NExpressRouteParamDescriptor | undefined,
   ) => NExpressRouteActionSubOptions;
+  Methods: (...args: unknown[]) => NExpressRouteActionOptions;
 };

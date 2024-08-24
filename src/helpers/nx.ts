@@ -14,6 +14,7 @@ import {
   NExpressRouteParamDescriptor,
   NExpressVerificationOptions,
   routerFunction,
+  RouterMethods,
   StaticOptions,
   UrlEncodedOptions,
 } from "../types";
@@ -85,4 +86,15 @@ export const NX = {
       params,
       action,
     }) as NExpressRouteActionSubOptions,
+  Methods: (...args: unknown[]): NExpressRouteActionOptions => {
+    // format: method, NExpressRouteActionSubOptions, method, NExpressRouteActionSubOptions...
+    const methods: NExpressRouteActionOptions =
+      {} as NExpressRouteActionOptions;
+    for (let i = 0; i < args.length; i += 2) {
+      const method = args[i] as string;
+      const options = args[i + 1] as NExpressRouteActionSubOptions;
+      methods[method as RouterMethods] = options;
+    }
+    return methods;
+  },
 };

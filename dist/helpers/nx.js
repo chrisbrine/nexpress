@@ -35,4 +35,14 @@ exports.NX = {
     params,
     action,
   }),
+  Methods: (...args) => {
+    // format: method, NExpressRouteActionSubOptions, method, NExpressRouteActionSubOptions...
+    const methods = {};
+    for (let i = 0; i < args.length; i += 2) {
+      const method = args[i];
+      const options = args[i + 1];
+      methods[method] = options;
+    }
+    return methods;
+  },
 };
