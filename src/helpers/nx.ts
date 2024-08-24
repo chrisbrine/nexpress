@@ -86,13 +86,15 @@ export const NX = {
       params,
       action,
     }) as NExpressRouteActionSubOptions,
-  Methods: (...args: unknown[]): NExpressRouteActionOptions => {
+  Methods: (
+    ...args: [RouterMethods, NExpressRouteActionSubOptions][]
+  ): NExpressRouteActionOptions => {
     // format: method, NExpressRouteActionSubOptions, method, NExpressRouteActionSubOptions...
     const methods: NExpressRouteActionOptions =
       {} as NExpressRouteActionOptions;
-    for (let i = 0; i < args.length; i += 2) {
-      const method = args[i] as string;
-      const options = args[i + 1] as NExpressRouteActionSubOptions;
+    for (const item of args) {
+      const method = item[0] as RouterMethods;
+      const options = item[1] as NExpressRouteActionSubOptions;
       methods[method as RouterMethods] = options;
     }
     return methods;

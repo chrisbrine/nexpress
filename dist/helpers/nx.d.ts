@@ -12,6 +12,7 @@ import {
   NExpressRouteParamDescriptor,
   NExpressVerificationOptions,
   routerFunction,
+  RouterMethods,
   StaticOptions,
   UrlEncodedOptions,
 } from "../types";
@@ -52,5 +53,7 @@ export declare const NX: {
     category?: string | undefined,
     params?: NExpressRouteParamDescriptor | undefined,
   ) => NExpressRouteActionSubOptions;
-  Methods: (...args: unknown[]) => NExpressRouteActionOptions;
+  Methods: (
+    ...args: [RouterMethods, NExpressRouteActionSubOptions][]
+  ) => NExpressRouteActionOptions;
 };

@@ -38,9 +38,9 @@ exports.NX = {
   Methods: (...args) => {
     // format: method, NExpressRouteActionSubOptions, method, NExpressRouteActionSubOptions...
     const methods = {};
-    for (let i = 0; i < args.length; i += 2) {
-      const method = args[i];
-      const options = args[i + 1];
+    for (const item of args) {
+      const method = item[0];
+      const options = item[1];
       methods[method] = options;
     }
     return methods;
