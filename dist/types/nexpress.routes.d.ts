@@ -61,6 +61,11 @@ export type NExpressRouteActionOptions = Record<
   RouterMethods,
   NExpressRouteActionSubOptions
 >;
+export interface RouterOptions {
+  caseSensitive?: boolean;
+  mergeParams?: boolean;
+  strict?: boolean;
+}
 export interface NExpressRouteOptions {
   path: string;
   middleware?: middlewareFunction[];
@@ -68,6 +73,7 @@ export interface NExpressRouteOptions {
   router?: NExpressRouteOptionsList;
   params?: NExpressParamsOptions;
   verify?: NExpressVerificationOptions;
+  options?: RouterOptions;
 }
 export type NExpressRouteOptionsList = Record<string, NExpressRouteOptions>;
 export type NExpressRouteList = Record<string, NExpressRoute>;

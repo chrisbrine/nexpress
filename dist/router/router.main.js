@@ -29,6 +29,7 @@ class NExpressRoute {
     this.routerMethods = [];
     this.router = (0, express_1.Router)();
     this.label = label;
+    this.options = options.options || {};
     this.path = options.path;
     this.methods = options.methods || {};
     this.subPath = subPath;

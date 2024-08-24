@@ -7,6 +7,7 @@ import {
 export declare class NExpressRoute {
   private router;
   private label;
+  private options;
   private path;
   private subPath;
   private fullPath;

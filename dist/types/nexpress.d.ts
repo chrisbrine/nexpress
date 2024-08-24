@@ -15,11 +15,6 @@ export type middlewareFunction = (
   res: Response,
   next: NextFunction,
 ) => void;
-export interface RouterOptions {
-  caseSensitive?: boolean;
-  mergeParams?: boolean;
-  strict?: boolean;
-}
 export interface JsonOptions {
   inflate?: boolean;
   limit?: number | string;
@@ -57,7 +52,6 @@ export interface NExpressOptions {
   middleware?: middlewareFunction[];
   staticRoot?: string;
   options?: {
-    Router?: RouterOptions;
     json?: JsonOptions;
     urlencoded?: UrlEncodedOptions;
     static?: StaticOptions;

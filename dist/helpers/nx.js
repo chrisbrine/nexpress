@@ -4,7 +4,7 @@ exports.NX = void 0;
 const server_1 = require("../server");
 const types_1 = require("../types");
 exports.NX = {
-  Server: (Ports, middleware, staticRoot, options, routes) =>
+  Server: (Ports, routes, middleware, staticRoot, options) =>
     new server_1.NExpress({
       Ports,
       middleware,
@@ -20,13 +20,14 @@ exports.NX = {
       ? types_1.NExpressPortTypes.HTTPS
       : types_1.NExpressPortTypes.HTTP,
   }),
-  Route: (path, middleware, methods, router, params, verify) => ({
+  Route: (path, middleware, methods, router, params, verify, options) => ({
     path,
     middleware,
     methods,
     router,
     params,
     verify,
+    options,
   }),
   Method: (action, title, description, category, params) => ({
     title,
