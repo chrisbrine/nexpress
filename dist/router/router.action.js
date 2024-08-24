@@ -71,6 +71,9 @@ class NExpressRouterAction {
                 });
             };
             const Utils = {
+                send: (data, status = 200) => {
+                    res.send(data).status(status);
+                },
                 sendJson: (data, status = 200) => {
                     res.json(data).status(status);
                 },
