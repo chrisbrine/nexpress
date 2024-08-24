@@ -1,1 +1,1 @@
-export * from "@/router/router.main";
+export * from "./router.main";

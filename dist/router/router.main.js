@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NExpressRoute = void 0;
 const express_1 = require("express");
-const router_action_1 = require("@/router/router.action");
-const router_verify_1 = require("@/router/router.verify");
+const router_action_1 = require("./router.action");
+const router_verify_1 = require("./router.verify");
 class NExpressRoute {
     fixPath(subPath, path) {
         if (path.length <= 0) {

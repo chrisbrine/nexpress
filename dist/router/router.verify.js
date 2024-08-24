@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleVerify = handleVerify;
-const types_1 = require("@/types");
+const types_1 = require("../types");
 const nvalidators_1 = require("@strbjun/nvalidators");
 const getValue = (req, type, param, id) => {
     switch (type) {

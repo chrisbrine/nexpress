@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { NExpressRouteOptionsList } from "@/types/nexpress.routes";
+import { NExpressRouteOptionsList } from "./nexpress.routes";
 export declare enum NExpressPortTypes {
     HTTP = "http",
     HTTPS = "https"

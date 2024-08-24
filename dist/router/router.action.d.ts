@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response, Router } from "express";
-import { NExpressRouteActionSubOptions, RouterMethods } from "@/types";
-import { NEexpressRouterActionInfoResult } from "@/types/nexpress.routes.info";
+import { NExpressRouteActionSubOptions, RouterMethods, NEexpressRouterActionInfoResult } from "../types";
 export declare class NExpressRouterAction {
     private label;
     private router;

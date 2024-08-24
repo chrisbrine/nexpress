@@ -1,6 +1,5 @@
 import express from "express";
-import { NExpressOptions, NExpressRouteOptionsList } from "@/types";
-import { NExpressRouterInfo } from "@/types/nexpress.routes.info";
+import { NExpressOptions, NExpressRouteOptionsList, NExpressRouterInfo } from "../types";
 export declare class NExpress {
     private app;
     private routes;

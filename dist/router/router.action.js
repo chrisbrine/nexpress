@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NExpressRouterAction = void 0;
-const types_1 = require("@/types");
+const types_1 = require("../types");
 class NExpressRouterAction {
     constructor(label, router, options, method, path, fullPath) {
         this.paramDescriptors = {};

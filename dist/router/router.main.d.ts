@@ -1,6 +1,5 @@
 import { Router } from "express";
-import { NExpressRouteOptions, NExpressRouteOptionsList } from "@/types";
-import { NExpressRouterInfo } from "@/types/nexpress.routes.info";
+import { NExpressRouteOptions, NExpressRouteOptionsList, NExpressRouterInfo } from "../types";
 export declare class NExpressRoute {
     private router;
     private label;

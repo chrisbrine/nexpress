@@ -7,9 +7,9 @@ exports.NExpress = void 0;
 const express_1 = __importDefault(require("express"));
 const https_1 = __importDefault(require("https"));
 const fs_1 = __importDefault(require("fs"));
-const router_1 = require("@/router");
-const types_1 = require("@/types");
-const utils_1 = require("@/utils");
+const router_1 = require("../router");
+const types_1 = require("../types");
+const utils_1 = require("../utils");
 class NExpress {
     constructor(options) {
         this.routes = {};
