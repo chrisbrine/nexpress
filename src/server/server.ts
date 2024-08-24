@@ -26,9 +26,6 @@ export class NExpress {
       });
     }
     if (options.options) {
-      if (options.options.Router) {
-        this.app.use(express.Router(options.options.Router));
-      }
       if (options.options.json) {
         this.app.use(express.json(options.options.json));
       }

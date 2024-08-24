@@ -22,17 +22,16 @@ import {
 export const NX = {
   Server: (
     Ports: NExpressPort[] | number,
+    routes?: NExpressRouteOptionsList | undefined,
     middleware?: middlewareFunction[] | undefined,
     staticRoot?: string | undefined,
     options?:
       | {
-          Router?: RouterOptions;
           json?: JsonOptions;
           urlencoded?: UrlEncodedOptions;
           static?: StaticOptions;
         }
       | undefined,
-    routes?: NExpressRouteOptionsList | undefined,
   ): NExpress =>
     new NExpress({
       Ports,
@@ -63,6 +62,7 @@ export const NX = {
     router?: NExpressRouteOptionsList | undefined,
     params?: NExpressParamsOptions | undefined,
     verify?: NExpressVerificationOptions | undefined,
+    options?: RouterOptions | undefined,
   ): NExpressRouteOptions =>
     ({
       path,
@@ -71,6 +71,7 @@ export const NX = {
       router,
       params,
       verify,
+      options,
     }) as NExpressRouteOptions,
   Method: (
     action: routerFunction,

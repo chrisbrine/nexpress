@@ -9,6 +9,7 @@ import {
   NExpressVerificationOptions,
   RouterMethods,
   NExpressRouterInfo,
+  RouterOptions,
 } from "../types";
 import { NExpressRouterAction } from "./router.action";
 import { handleVerify } from "./router.verify";
@@ -16,6 +17,7 @@ import { handleVerify } from "./router.verify";
 export class NExpressRoute {
   private router: Router;
   private label: string;
+  private options: RouterOptions;
   private path: string;
   private subPath: string;
   private fullPath: string;
@@ -50,6 +52,7 @@ export class NExpressRoute {
   constructor(label: string, options: NExpressRouteOptions, subPath = "") {
     this.router = Router();
     this.label = label;
+    this.options = options.options || {};
     this.path = options.path;
     this.methods = options.methods || ({} as NExpressRouteActionOptions);
     this.subPath = subPath;
