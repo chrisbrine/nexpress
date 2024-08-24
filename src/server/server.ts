@@ -59,7 +59,8 @@ export class NExpress {
   private getHostString(port: NExpressPort) {
     const host = port.host ? port.host : "";
     if (host) {
-      const protocol = port.protocol === NExpressPortTypes.HTTPS ? "https" : "http";
+      const protocol =
+        port.protocol === NExpressPortTypes.HTTPS ? "https" : "http";
       return `${protocol}://${host}:${port.port}`;
     } else {
       return `port ${port.port}`;
