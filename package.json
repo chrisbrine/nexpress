@@ -1,6 +1,6 @@
 {
   "name": "@strbjun/nexpress",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This module will allow for using a simple object for creating an express based application along with integrating in validators.",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "@strbjun/nvalidators": "^0.1.1",
-    "express": "^4.19.2"
+    "express": "^4.21.0"
   }
 }
